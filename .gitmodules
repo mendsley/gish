@@ -1,0 +1,13 @@
+[submodule "depend/sdl"]
+	path = depend/sdl
+	url = https://github.com/SDL-mirror/SDL
+	branch = tags/release-1.2.15
+[submodule "depend/libvorbis"]
+	path = depend/libvorbis
+	url = https://github.com/xiph/vorbis
+[submodule "depend/libogg"]
+	path = depend/libogg
+	url = https://github.com/xiph/ogg
+[submodule "depend/openal"]
+	path = depend/openal
+	url = git://repo.or.cz/openal-soft.git
