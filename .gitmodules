@@ -11,3 +11,6 @@
 [submodule "depend/openal"]
 	path = depend/openal
 	url = git://repo.or.cz/openal-soft.git
+[submodule "runtime"]
+	path = runtime
+	url = git@octocode.org:mendsley/gish-runtime
