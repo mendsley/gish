@@ -22,6 +22,11 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifdef WINDOZE
 void getcputime(__int64 *ptime)
   {
+#if defined(_M_AMD64)
+	LARGE_INTEGER li;
+	QueryPerformanceCounter(&li);
+	*ptime = li.QuadPart;
+#else
   __asm
     {
     rdtsc
@@ -29,6 +34,7 @@ void getcputime(__int64 *ptime)
     mov dword ptr [esi],eax
     mov dword ptr 4[esi],edx
     }
+#endif
   }
 #endif
 
